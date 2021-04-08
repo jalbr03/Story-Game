@@ -1,0 +1,60 @@
+{
+   "start": "The jail",
+   "The jail": {
+      "startText": "You are in jail and need to escape! What are you going to do?",
+      "options": {
+         "1": {
+            "action": "Kick the door",
+            "text": "The door falls with ease.",
+            "goTo": "Out side"
+         },
+         "2": {
+            "action": "Cry like a baby",
+            "text": "A guard walks up and says \"You suck! I thought you were an actual baby!\"",
+            "goTo": "The jail"
+         }
+      }
+   },
+
+   "Out side": {
+      "startText": "You made it! you're now out side! What now?",
+      "options": {
+         "1": {
+            "action": "Jump and yell \"Yas!\"",
+            "text": "You jump and yell \"Yas!\" then a guard hears you and throws you back into jail",
+            "goTo": "The jail"
+         },
+         "2": {
+            "action": "Walk along the path",
+            "text": "You start walking",
+            "goTo": "Path"
+         },
+         "3": {
+            "action": "Wait",
+            "text": "You wait for a bit and a guard walks by and sees you and puts you back into jail",
+            "goTo": "The jail"
+         }
+      }
+   },
+
+   "Path": {
+      "startText": "You have been fallowing the path for some time now and are met with a fork in the road.",
+      "options": {
+         "1": {
+            "action": "Go left",
+            "text": "You go left path..... and end up in jail",
+            "goTo": "The jail"
+         },
+         "2": {
+            "action": "Go right",
+            "text": "You go right path..... and end up in jail",
+            "goTo": "The jail"
+         },
+         "3": {
+            "action": "Fly",
+            "text": "You use all of your power to jump and fly but your powers were not strong enough. And fall about 100ft and die!",
+            "goTo": "The jail"
+         }
+      }
+   }
+}
