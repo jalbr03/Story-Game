@@ -1,16 +1,42 @@
 {
    "start": "The jail",
    "The jail": {
-      "startText": "You are in jail and need to escape! What are you going to do?",
+      "startText": "You are now in jail and need to escape what shall you doooo?",
       "options": {
          "1": {
             "action": "Kick the door",
-            "text": "The door falls with ease.",
+            "text": "You kick the door and it falls with ease",
             "goTo": "Out side"
          },
          "2": {
-            "action": "Cry like a baby",
-            "text": "A guard walks up and says \"You suck! I thought you were an actual baby!\"",
+            "action": "Wait",
+            "text": "You begin waiting",
+            "goTo": "Wainting in jail"
+         },
+         "3": {
+            "action": "Scream",
+            "text": "You scream at the top of your lungs \"Heeeelllppppp!\" guard runs up and says \"You idiot you made me run all the way here!\"",
+            "goTo": "The jail"
+         }
+      }
+   },
+
+   "Wainting in jail": {
+      "startText": "You have been waiting for many hours and are very board.",
+      "options": {
+         "1": {
+            "action": "Kick the door",
+            "text": "You kick the door and it falls with ease finaly",
+            "goTo": "Out side"
+         },
+         "2": {
+            "action": "Wait",
+            "text": "You begin waiting some more why are you doing this?",
+            "goTo": "Wainting in jail"
+         },
+         "3": {
+            "action": "Fall asleep",
+            "text": "You fall asleep and get realy good rest.",
             "goTo": "The jail"
          }
       }
@@ -53,6 +79,11 @@
          "3": {
             "action": "Fly",
             "text": "You use all of your power to jump and fly but your powers were not strong enough. And fall about 100ft and die!",
+            "chapterGoTo": "Heck"
+         },
+         "4": {
+            "action": "Go back to jail",
+            "text": "",
             "goTo": "The jail"
          }
       }

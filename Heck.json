@@ -1,0 +1,33 @@
+{
+   "start": "The trail to death",
+   "The trail to death": {
+      "startText": "You have died and now are in Heck. You are in line to the judgement desk",
+      "options": {
+         "1": {
+            "action": "Stay in line",
+            "text": "You stay in the line and make it to the desk",
+            "goTo": "The desk"
+         },
+         "2": {
+            "action": "Ask the person in front of you where you are?",
+            "text": "\"You are in Heck so stay in line.\"",
+            "goTo": "The trail to death"
+         }
+      }
+   },
+   "The desk": {
+      "startText": "Please state you name.",
+      "options": {
+         "1": {
+            "action": "Say your name",
+            "text": "You say \"I am Jimy\" the desk person says \"Ok your punishment is to get back in line and do this forever.\"",
+            "goTo": "The trail to death"
+         },
+         "2": {
+            "action": "Slap the desk person",
+            "text": "A tall devel walks up to you and says you bad",
+            "goTo": "The trail to death"
+         }
+      }
+   }
+}
