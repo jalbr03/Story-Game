@@ -79,7 +79,7 @@
          "3": {
             "action": "Fly",
             "text": "You use all of your power to jump and fly but your powers were not strong enough. And fall about 100ft and die!",
-            "chapterGoTo": "Heck"
+            "chapterGoTo": "hell\\Heck"
          },
          "4": {
             "action": "Go back to jail",

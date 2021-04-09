@@ -16,8 +16,11 @@ the top is "the page name"
 
 you can instead us "chapterGoTo" to go to a new json chapter just put the name of the json file like this:
 ex: "chapterGoTo": "next chapter"
-
-
+NOTE: the json can not have any spaces so instead of "name name" use "name_name"
+you can also find a file in a folder from the root but the start of the game must be at the root
+ex: "chapterGoTo": "folder\\next_chapter" make sure to add double back slashes to a path instead of one or it will crash
+NOTE: using a path does not move the root so in evey file even in that same path must use the full path from the root when using "chapterGoTo"
+ex: "chapterGoTo": "kingdomfolder\\house" with in the house.json: "chapterGoTo": "kingdomfolder\\other_house"
 
 to use the inputted player name us "(player_name)"
 
