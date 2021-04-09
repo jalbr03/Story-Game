@@ -1,5 +1,6 @@
 player_info = ds_map_create();
 story_path = "";
+start_file = "";
 
 enum states {
 	prompt,

@@ -31,11 +31,12 @@ function increment_show_text(rect_w) {
 
 function init_story() {
 	var manager = instance_create_layer(x,y,layer,obj_game_manager);
-	var file = file_text_open_read(story_path + "startChapter.json");
+	var file = file_text_open_read(story_path + start_file);
 	var str = read_file(file);
 	manager.ds_map = json_decode(str);
 	file_text_close(file);
 	
+	manager.start_file = start_file;
 	manager.story_path = story_path;
 	manager.player_info = player_info;
 	manager.current_state = ds_map_find_value(manager.ds_map, "start");
@@ -88,5 +89,23 @@ function goto_next_chapter(chapter_name) {
 	ds_map = json_decode(str);
 	file_text_close(file);
 
+	save_game(chapter_name+".json");
 	current_state = ds_map_find_value(ds_map, "start");
+}
+
+function save_game(chapter_name) {
+	file_delete(working_directory+"save_state.txt");
+	var file = file_text_open_write(working_directory+"save_state.txt");
+	file_text_write_string(file, story_path);
+	file_text_writeln(file);
+	file_text_write_string(file, chapter_name);
+	file_text_writeln(file);
+	file_text_write_string(file, ds_map_find_value(player_info, "name"));
+	file_text_writeln(file);
+	file_text_write_string(file, ds_map_find_value(player_info, "gender_he_she"));
+	file_text_writeln(file);
+	file_text_write_string(file, ds_map_find_value(player_info, "gender_him_her"));
+	file_text_writeln(file);
+	file_text_write_string(file, ds_map_find_value(player_info, "gender_sir_mam"));
+	file_text_close(file);
 }
