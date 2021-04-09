@@ -26,9 +26,11 @@ switch(state) {
 	case states.story_path:
 		//story_path = get_open_filename_ext("startChapter|*.json", "", "", "Get story path");
 		var done = false;
+		var last_file = "";
 		while(!done) {
-			story_path = get_open_filename("|*.json", "");
+			story_path = get_open_filename_ext("|*.json", "", "", "Last selected file: "+last_file);
 			var last_of_path = get_last_of_path(story_path);
+			last_file = last_of_path;
 			
 			if(last_of_path == "startChapter.json") {
 				story_path = string_replace_all(story_path, "startChapter.json", "");
