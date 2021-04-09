@@ -3,7 +3,7 @@ draw_set_valign(fa_center);
 
 switch(state) {
 	case states.prompt:
-		draw_text(room_width/2, room_height/3, "IMPORTANT: Press OK to input the path to you story. \nSelect each chapter.json file then select startChapter last!\nAnd that will start the story.");
+		draw_text(room_width/2, room_height/3, "Press OK to input the path to you story.");
 		
 		var text = "OK"
 		var current_x = room_width/2;
@@ -25,20 +25,16 @@ switch(state) {
 	
 	case states.story_path:
 		//story_path = get_open_filename_ext("startChapter|*.json", "", "", "Get story path");
-		var done = false;
-		var last_file = "";
-		while(!done) {
-			story_path = get_open_filename_ext("|*.json", "", "", "Last selected file: "+last_file);
-			var last_of_path = get_last_of_path(story_path);
-			last_file = last_of_path;
-			
-			if(last_of_path == "startChapter.json") {
-				story_path = string_replace_all(story_path, "startChapter.json", "");
-				done = true;
-			}
-		}
-		state = states.player_name;
+		story_path = get_open_filename_ext("|*.json", "", "", "Select story");
+		var last_of_path = get_last_of_path(story_path);
+		story_path = string_replace_all(story_path, last_of_path, "");
 		
+		if(file_exists(story_path+"startChapter.json")) {
+			state = states.player_name;
+		} else {
+			show_message("Invalid file path. The path must contain startChapter.json");
+			state = states.prompt;
+		}
 		break;
 	
 	case states.player_name:
