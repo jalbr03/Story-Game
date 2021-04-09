@@ -15,7 +15,7 @@
          },
          "3": {
             "action": "Scream",
-            "text": "You scream at the top of your lungs \"Heeeelllppppp!\" guard runs up and says \"You idiot you made me run all the way here!\"",
+            "text": "You scream at the top of your lungs \"Heeeelllppppp!\" guard runs up and says \"You idiot (gender_sir_mam) you made me run all the way here!\"",
             "goTo": "The jail"
          }
       }
