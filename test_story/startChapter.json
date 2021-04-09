@@ -36,7 +36,7 @@
          },
          "3": {
             "action": "Fall asleep",
-            "text": "You fall asleep and get realy good rest.",
+            "text": "You fall asleep and get really good rest.",
             "goTo": "The jail"
          }
       }
